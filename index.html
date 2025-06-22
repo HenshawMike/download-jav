@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAV - Just Attended Virtually</title>
+    <link rel="icon" href="app_logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <a href="index.html" class="logo-link">
+                    <img src="app_logo.png" alt="JAV Logo" class="logo">
+                    <div class="brand">
+                        <h1>JAV</h1>
+                    </div>
+                </a>
+            </div>
+            <nav class="navigation-menu" id="navigation-menu">
+                <ul>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger-menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </header>
+        
+        <main>
+            <div class="hero-section">
+                <div class="tagline-container">
+                    <p class="tagline-main">Just Attend Virtually</p>
+                    <p class="tagline-subtitle">Your Smart Attendance Solution</p>
+                    <div class="tagline-features">
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Revolutionizing Education in Nigeria</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Empowering Lecturers with Smart Tracking</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>Keeping Students Connected & Accountable</span>
+                        </div>
+                    </div>
+                    <p class="tagline-cta">🚀 <span class="highlight">THIS IS ONLY THE BEGINNING</span> 🚀</p>
+                </div>
+            </div>
+
+            <div class="download-card">
+                <div class="app-preview">
+                    <img src="app_logo.png" alt="JAV App Icon" class="app-icon">
+                    <div class="app-info">
+                        <h2>Download JAV</h2>
+                        <p class="version">Version 1.0.0</p>
+                        <p class="description">Smart attendance tracking made simple and efficient</p>
+                    </div>
+                </div>
+                
+                <div class="download-buttons">
+                    <a href="downloads/app-release.apk" class="download-btn primary" id="downloadBtn" download>
+                        <i class="fab fa-android"></i>
+                        Download for Android
+                    </a>
+                    <div id="downloadStatus" class="download-status"></div>
+                    <a href="#" class="download-btn secondary playstore-btn">
+                        <i class="fab fa-google-play"></i>
+                        Get it on Play Store
+                        <span class="coming-soon">Coming Soon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact & Request Section -->
+            <div id="contact" class="contact-section">
+                <div class="tabs">
+                    <button class="tab-link active" data-tab="feedback-panel">
+                        <i class="fas fa-comment-dots"></i> Give Feedback
+                    </button>
+                    <button class="tab-link" data-tab="course-request-panel">
+                        <i class="fas fa-chalkboard-teacher"></i> Request a Course
+                    </button>
+                </div>
+
+                <!-- Feedback Panel -->
+                <div id="feedback-panel" class="tab-panel active">
+                    <h2>We'd Love to Hear From You</h2>
+                    <p>Help us improve JAV by sharing your feedback, suggestions, or reporting issues.</p>
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="form-group icon-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group icon-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="Feedback">General Feedback</option>
+                                <option value="Bug Report">Bug Report</option>
+                                <option value="Feature Request">Feature Request</option>
+                                <option value="Support">Support Request</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us what you think..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Feedback
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Course Request Panel -->
+                <div id="course-request-panel" class="tab-panel">
+                    <h2>Lecturers: Request a Course</h2>
+                    <p>Can't find a course? Request for it to be added to the JAV platform.</p>
+                    <form id="courseRequestForm" class="feedback-form">
+                        <div class="form-group icon-group">
+                            <i class="fas fa-user-tie"></i>
+                            <input type="text" id="lecturerName" name="lecturerName" placeholder="Full Name (e.g., Dr. Jane Doe)" required>
+                        </div>
+                        <div class="form-group icon-group">
+                            <i class="fas fa-at"></i>
+                            <input type="email" id="lecturerEmail" name="lecturerEmail" placeholder="Official Email" required>
+                        </div>
+                        <div class="form-group icon-group">
+                            <i class="fas fa-university"></i>
+                            <input type="text" id="institution" name="institution" placeholder="University / Institution" required>
+                        </div>
+                        <div class="form-group icon-group">
+                            <i class="fas fa-book-open"></i>
+                            <input type="text" id="courseName" name="courseName" placeholder="Course Name" required>
+                        </div>
+                        <div class="form-group icon-group">
+                            <i class="fas fa-hashtag"></i>
+                            <input type="text" id="courseCode" name="courseCode" placeholder="Course Code (e.g., CSC 101)">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="courseDetails" name="courseDetails" rows="4" placeholder="Briefly tell us why this course is important..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-plus-circle"></i>
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JAV</h3>
+                    <p>Smart attendance tracking for the modern world</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> blimtech01@gmail.com</p>
+                </div>
+                <!-- <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JAV. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
